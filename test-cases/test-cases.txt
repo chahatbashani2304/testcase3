@@ -1,0 +1,5 @@
+# 1: health check
+curl http://127.0.0.1:5000/
+
+# 2: post a failed login
+curl -X POST http://127.0.0.1:5000/events -H "Content-Type: application/json" -d '{"user_id": "alice@example.com", "ip": "203.0.113.12", "timestamp": "2025-11-12T08:05:00Z", "success": false, "location": "New York, USA", "user_agent": "TestAgent/1.0"}'
